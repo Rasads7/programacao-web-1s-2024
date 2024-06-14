@@ -23,9 +23,18 @@ function removerProduto(id){
     });
 }
 
+function editarProduto(id, qtd){
+    produtos = produtos.filter((p) =>{
+        if(p.id == id){
+        return p.qtd = qtd;
+        }
+    });
+}
+
 module.exports = {
     criarProduto,
     adicionarProduto,
     listarProdutos,
-    removerProduto
+    removerProduto,
+    editarProduto
 };
